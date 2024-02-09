@@ -1,0 +1,8 @@
+<div class="product-edit">
+  <h1> Edit Product </h1>
+  <form>
+    <input type="text" [formControl]="productIdConsole" placeholder="Product ID" />
+    <input type="text" [formControl]="productNameControl" placeholder="Product Name" />
+    <button type="button" (click)="update()">Update</button>
+  </form>
+</div>
