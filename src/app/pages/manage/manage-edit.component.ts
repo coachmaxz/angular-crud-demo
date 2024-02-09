@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
   selector: "app-manage-edit",
   templateUrl: "./manage-edit.component.html",
   styleUrls: ["./manage-edit.component.scss"],
+  imports: [ ReactiveFormsModule, FormsModule ],
 })
 
 export class ManageEditComponent implements OnInit {
@@ -20,10 +21,13 @@ export class ManageEditComponent implements OnInit {
   async ngOnInit(): Promise<void> {}
 
   async update() {
+    // console.log(this.productIdConsole.value)
+    // console.log(this.productNameControl.value)
     if (this.productIdConsole.value === '' || this.productNameControl.value === '') {
       alert('Error')
       return
     }
+    alert('Complated !!')
     this.router.navigateByUrl("/product");
   }
 

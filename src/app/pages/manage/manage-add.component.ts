@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
   selector: "app-manage-add",
   templateUrl: "./manage-add.component.html",
   styleUrls: ["./manage-add.component.scss"],
+  imports: [ ReactiveFormsModule, FormsModule ],
 })
 
 export class ManageAddComponent implements OnInit {
@@ -20,10 +21,13 @@ export class ManageAddComponent implements OnInit {
   async ngOnInit(): Promise<void> {}
 
   async add() {
+    // console.log(this.productIdConsole.value)
+    // console.log(this.productNameControl.value)
     if (this.productIdConsole.value === '' || this.productNameControl.value === '') {
       alert('Error')
       return
     }
+    alert('Complated !!')
     this.router.navigateByUrl("/product");
   }
 
