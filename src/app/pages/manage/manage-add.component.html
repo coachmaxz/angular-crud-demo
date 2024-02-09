@@ -1,0 +1,8 @@
+<div class="product-add">
+  <h1> Add Product </h1>
+  <form>
+    <input type="text" [formControl]="productIdConsole" placeholder="Product ID" />
+    <input type="text" [formControl]="productNameControl" placeholder="Product Name" />
+    <button type="button" (click)="add()">Add</button>
+  </form>
+</div>
