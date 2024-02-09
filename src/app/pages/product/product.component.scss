@@ -1,0 +1,58 @@
+div {
+  width: 100%;
+  max-width: 480px;
+  h1 { 
+    display: inline-block;
+    padding-bottom: 0px;
+    font-size: 24px;
+  }
+  a.add {
+    display: inline;
+    padding-top: 25px;
+    float: right;
+    font-size: 14px;
+    color: green;
+    text-decoration: none;
+  }
+}
+table {
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  thead {
+    tr {
+      th { 
+        padding: 5px 10px;
+        font-size: 14px;
+        text-align: left;
+        text-transform: uppercase;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border: 1px solid #ccc;
+      td { 
+        padding: 5px 10px;
+        font-size: 14px;
+        color: gray;
+        border: 1px solid #ccc;
+        border-left: none;
+        border-right: none;
+      }
+      a {
+        cursor: pointer;
+        padding: 0 5px 0 0;
+        font-size: 12px;
+        &.edit {
+          color: gray;
+        }
+        &.del {
+          color: red;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

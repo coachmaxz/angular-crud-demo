@@ -1,0 +1,31 @@
+<div>
+  <h1> Product Page </h1>
+  <a class="add" href="/product/add">(+ Add)</a>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Manage</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of [
+      { productID: 'PROD00001', productName: 'Product Name 01', editLink: 'product/edit/PROD00001', delLink: 'product/del/PROD00001' },
+      { productID: 'PROD00002', productName: 'Product Name 02', editLink: 'product/edit/PROD00002', delLink: 'product/del/PROD00002' },
+      { productID: 'PROD00003', productName: 'Product Name 03', editLink: 'product/edit/PROD00003', delLink: 'product/del/PROD00003' },
+      { productID: 'PROD00004', productName: 'Product Name 04', editLink: 'product/edit/PROD00004', delLink: 'product/del/PROD00004' },
+      { productID: 'PROD00005', productName: 'Product Name 05', editLink: 'product/edit/PROD00005', delLink: 'product/del/PROD00005' },
+    ]; track item.productID) {
+      <tr>
+        <td>{{ item.productID }}</td>
+        <td>{{ item.productName }}</td>
+        <td>
+          <a class="edit" [href]="item.editLink">Edit</a>
+          <a class="del" (click)="onDelete(item.productID)">Del</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
