@@ -11,13 +11,13 @@
     </tr>
   </thead>
   <tbody>
-    @for (item of productLists; track item.productID) {
+    @for (item of productLists; track item.productID; let index = $index) {
       <tr>
         <td>{{ item.productID }}</td>
         <td>{{ item.productName }}</td>
         <td>
           <a class="edit" [href]="item.editLink">Edit</a>
-          <a class="del" (click)="onDelete(item.productID)">Del</a>
+          <a class="del" (click)="onDelete(index)">Del</a>
         </td>
       </tr>
     }

@@ -23,8 +23,9 @@ export class ProductComponent implements OnInit {
   constructor(private router: Router) {}
   async ngOnInit(): Promise<void> {}
 
-  async onDelete(id: string) {
+  async onDelete(index: number) {
     alert('Delete product')
+    this.productLists = this.productLists.filter((item: any, i: number) => i !== index)
   }
 
 }
